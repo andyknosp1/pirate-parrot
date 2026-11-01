@@ -1,0 +1,24 @@
+# Secrets: never commit these
+.env
+*.env
+!.env.example
+
+# Generated audio (made per build with make_clips.py, in your own voice)
+sounds/
+
+# Log files (may contain what visitors said)
+logs/
+
+# Camera test photos from `python camera.py`
+camera_test_*.jpg
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/

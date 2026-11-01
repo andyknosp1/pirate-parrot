@@ -1,0 +1,13 @@
+# Copy to /home/pi/.asoundrc (no sudo needed), then restart the parrot.
+#
+# Makes the Pi's default sound output a "plug" into the MAX98357A amp. The amp's raw
+# device only accepts some sample rates and stereo; the plug converts the parrot's
+# 22050 Hz mono voice automatically. Delete the file to go back to the headphone jack.
+pcm.!default {
+    type plug
+    slave.pcm "hw:CARD=MAX98357A,DEV=0"
+}
+ctl.!default {
+    type hw
+    card MAX98357A
+}

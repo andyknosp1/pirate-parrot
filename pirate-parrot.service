@@ -1,0 +1,18 @@
+[Unit]
+Description=PiRate Parrot (talking Halloween parrot)
+After=network-online.target sound.target
+Wants=network-online.target
+
+[Service]
+User=pi
+WorkingDirectory=/home/pi/pirate-parrot
+ExecStart=/home/pi/pirate-parrot/venv/bin/python parrot.py
+Restart=always
+RestartSec=3
+# Show his log on the HDMI monitor (the Pi console, tty1) as well as in the journal.
+# Remove these two lines to keep the screen quiet.
+StandardOutput=journal+console
+StandardError=journal+console
+
+[Install]
+WantedBy=multi-user.target
