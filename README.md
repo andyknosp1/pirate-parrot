@@ -15,7 +15,7 @@ The reference build, **Rotwing**, is a modified 5 ft animated parrot (the Home D
 Halloween 2026. The software is not tied to that prop: any animatronic with a DC motor
 for the beak (and optionally the head) and a small speaker can be adapted.
 
-*Demo video: add a link here.*
+**[Watch the demo video](https://www.youtube.com/shorts/qg-jDwzeedQ)** to see Rotwing in action.
 
 ## Features
 
