@@ -103,6 +103,7 @@ to change:
 | `START_MODE` | kids | Keep this as `kids`. |
 | `ADULT_PHRASE`, `KIDS_PHRASE` | open the rum locker, swab the deck | Use real, everyday words; matching tolerates near-misses. |
 | `MAX_TURNS`, `GREET_COOLDOWN_SECONDS` | 4, 20 | Exchanges per group; rest between groups. |
+| `PORCH_DECORATIONS` | blank | Props the camera can see, e.g. "a pirate dog statue", so he doesn't greet them. |
 
 ## Rotating a key
 

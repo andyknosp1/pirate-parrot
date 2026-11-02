@@ -173,10 +173,17 @@ rather than inventing it.
 SYSTEM_PROMPTS = {"kids": (KIDS_PERSONA + COMMON_RULES).replace("Rotwing", PARROT_NAME),
                   "adult": (ADULT_PERSONA + COMMON_RULES).replace("Rotwing", PARROT_NAME)}
 
-GREET_PROMPT = ("(New visitors just walked up. Greet them in one short sentence, "
-                "reacting to what they're wearing, then ask them one fun question to get them "
-                "talking. If the photo clearly shows no people at all, reply with only the "
-                "word NOBODY.)")
+# Decorations near the parrot that the camera can see (e.g. "a pirate dog statue"), so he
+# doesn't greet them. Optional; statues and props are ignored in general anyway.
+PORCH_DECORATIONS = os.getenv("PORCH_DECORATIONS", "").strip()
+GREET_PROMPT = ("(Something moved in front of you. Look closely at the photo. Statues, "
+                "scarecrows, skeletons, mannequins, inflatables, pumpkins and other "
+                "decorations are NOT visitors, even if they wear costumes"
+                + (f" (the porch has {PORCH_DECORATIONS}, which is a decoration)"
+                   if PORCH_DECORATIONS else "")
+                + ". If no real, living person is clearly there, reply with only the word "
+                "NOBODY. Otherwise greet the people in one short sentence, reacting to what "
+                "they're wearing, then ask them one fun question to get them talking.)")
 LAST_TURN_NOTE = ("\n\n(This is your last reply to this group: answer briefly, then give "
                   "them a cheerful pirate goodbye.)")
 END_MARK = "[END]"
